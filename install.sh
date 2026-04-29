@@ -14,12 +14,16 @@
 #              libgeos-dev \
 #              libffi-dev
 
+# Install PorePy and dependencies
 git clone https://github.com/pmgbergen/porepy.git porepy
 cd porepy
-
 pip install .[testing]
 pip install -e .
+cd ..
 
+# Install teaching material
+git clone https://github.com/keileg/dfn_workshop_porepy.git porepy_material
+cd porepy_material
 
 # Example: install additional Python packages
 # pip install <package>
