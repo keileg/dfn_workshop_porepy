@@ -1,10 +1,25 @@
 #!/bin/bash
 # Install script for dfn_workshop_porepy
-# Add any additional dependency installation steps here.
+#
+# THE FOLLOWING COMMANDS MUST BE RUN IN SUDO MODE:
+#           sudo apt-get update
+#           sudo apt-get install -y \
+#              build-essential \
+#              cmake \
+#              libgtest-dev \
+#              libeigen3-dev \
+#              python3-pybind11 \
+#              pybind11-dev \
+#              libglu1-mesa \
+#              libgeos-dev \
+#              libffi-dev
 
-set -e
+git clone https://github.com/pmgbergen/porepy.git porepy
+cd porepy
 
-echo "Installing dependencies for dfn_workshop_porepy..."
+pip install .[testing]
+pip install -e .
+
 
 # Example: install additional Python packages
 # pip install <package>
