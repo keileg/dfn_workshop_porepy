@@ -1,0 +1,12 @@
+# Dockerfile to create a Docker image containing PorePy and the workshop tutorials.
+#
+# Run with 
+# >> docker build -t dfn_workshop -f Dockerfile_image
+
+FROM porepy/stable
+
+WORKDIR /workdir
+
+RUN git clone https://github.com/keileg/dfn_workshop_porepy.git tutorial
+
+ENTRYPOINT [ "bash" ]
