@@ -1,7 +1,7 @@
 {
   "name": "dfn_workshop_porepy",
   "build": {
-    "dockerfile": "../Dockerfile",
+    "dockerfile": "../dockerfiles/Dockerfile_codespaces",
     "context": ".."
   },
   "postCreateCommand": "bash install.sh",
