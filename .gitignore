@@ -1,0 +1,6 @@
+*.msh
+*.geo_unrolled*
+*.vtu
+*.pvd
+*.vtk
+*visualization*
